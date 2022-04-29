@@ -1,7 +1,11 @@
 import App from '../src/App.svelte';
-import { render, fireEvent } from '@testing-library/svelte';
+import { render } from '@testing-library/svelte';
 
-it('should render', () => [
 
-    render(App)
-]);
+describe('App Component', () => {
+
+    it('should render', () => {
+
+        render(App);
+    });
+});
