@@ -18,7 +18,8 @@
         "sourceType": "module"
     },
     "rules": {
-        "semi": ["error", "always"],
+        "semi": ["warn", "always"],
         "quotes": ["warn", "single"]
-    }
+    },
+    "ignorePatterns": [ "babel.config.js", "jest.config.js", "rollup.config.js"]
 }
