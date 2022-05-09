@@ -1,13 +1,14 @@
 <script>
-    import TreeNode from './TreeNode.svelte'
+    import TreeBranch from "./TreeBranch.svelte";
+    import TreeNode from './TreeNode.svelte';
+    export let data;
 
-    const node = {
-        value: 'test'
-    }
 </script>
 
-<main>
-    <TreeNode node={node}></TreeNode>
-</main>
+<ul>
+    {#each data as item}
+        <TreeNode node={item}></TreeNode>
+    {/each}
+</ul>
 
 <style></style>

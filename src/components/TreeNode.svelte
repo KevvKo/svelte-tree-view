@@ -4,7 +4,7 @@
 
 <li>
     <input type='checkbox' />
-    <span>{node.value}</span>
+    <span>{node.name}</span>
 </li>
 
 <style></style>

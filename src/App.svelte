@@ -1,9 +1,10 @@
 <script>
 	import SvelteTree from './components/SvelteTree.svelte'
+    import {mockData} from './mock.js';
 </script>
 
 <main>
-    <SvelteTree></SvelteTree>
+    <SvelteTree data={mockData}></SvelteTree>
 </main>
 
 <style global lang="postcss">
