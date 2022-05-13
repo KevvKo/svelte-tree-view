@@ -1,10 +1,11 @@
 <script>
     import TreeNode from './TreeNode.svelte';
-    export let node;
+    export let data;
+    
 </script>
 
-<ul>
-
-</ul>
+{#each data as item}
+    <TreeNode node={item}></TreeNode>
+{/each}
 
 <style></style>

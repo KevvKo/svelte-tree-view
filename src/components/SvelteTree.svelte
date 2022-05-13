@@ -6,9 +6,7 @@
 </script>
 
 <ul>
-    {#each data as item}
-        <TreeNode node={item}></TreeNode>
-    {/each}
+    <TreeBranch data={data}></TreeBranch>
 </ul>
 
 <style></style>
