@@ -1,6 +1,5 @@
 <script>
     export let node;
-    export let indent = 0;
 
     let open = false;
 
@@ -14,7 +13,7 @@
 
 </script>
 
-<li style="margin-left: {indent}px" class="">
+<li class="ml-5">
     <div class="flex">
         {#if open}
             <svg on:click={handleClick} xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
@@ -32,7 +31,7 @@
     {#if open}
         <ul>
             {#each node.children as child}
-                <svelte:self node={child} indent={indent + 20} />
+                <svelte:self node={child}/>
             {/each} 
         </ul>
     {/if}
