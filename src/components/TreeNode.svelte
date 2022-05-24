@@ -1,7 +1,7 @@
 <script>
-    export let node;
+    export let node, collapse;
 
-    let open = false;
+    let open = collapse;
 
     function toggleOpen(){
         open = !open;
@@ -31,7 +31,7 @@
     {#if open}
         <ul>
             {#each node.children as child}
-                <svelte:self node={child}/>
+                <svelte:self node={child} collapse={collapse} />
             {/each} 
         </ul>
     {/if}

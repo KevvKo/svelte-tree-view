@@ -38,6 +38,10 @@
                     <td class="p-4">data</td>
                     <td class="p-4">Object of child and parents to render as a tree</td>
                 </tr>
+                <tr class="border-b-2 border-slate-200 hover:bg-gray-100 duration-200 transition-all">
+                    <td class="p-4">collapse</td>
+                    <td class="p-4">Expanding the tree or not</td>
+                </tr>
             </tbody>
         </table>
     </section>
