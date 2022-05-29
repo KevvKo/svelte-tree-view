@@ -13,14 +13,25 @@
     </a> 
 </nav>
 <main class="mt-5 mx-5 px-5">
-    <h2 class="text-lg font-semibold text-slate-600 mb-5">Basic Usage</h2>
     <section class="flex mx-5 mb-20">
         <div class="w-1/2">
+            <h2 class="text-lg font-semibold text-slate-600 mb-5">Basic Usage</h2>
             <SvelteTree data={mockData}></SvelteTree>
         </div>
         <div class="w-1/2">
             <code class="bg-slate-700 text-slate-300 w-full h-80 block p-5 rounded">
                 &lt;Svelte-Tree-View data=&#123;mockData&#125;&gt;&lt;/Svelte-Tree-View&gt;
+            </code>
+        </div>
+    </section>
+    <section class="flex mx-5 mb-20">
+        <div class="w-1/2">
+            <h2 class="text-lg font-semibold text-slate-600 mb-5">Tree view with collapsed nodes</h2>
+            <SvelteTree data={mockData} collapse={true}></SvelteTree>
+        </div>
+        <div class="w-1/2">
+            <code class="bg-slate-700 text-slate-300 w-full h-80 block p-5 rounded">
+                &lt;Svelte-Tree-View data=&#123;mockData&#125; collapse=&#123;true&#125;&gt;&lt;/Svelte-Tree-View&gt;
             </code>
         </div>
     </section>
