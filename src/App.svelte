@@ -1,6 +1,6 @@
 <script>
-	import SvelteTree from './components/SvelteTree.svelte'
-    import {mockData} from './mock.js';
+	import SvelteTree from './lib/src/components/SvelteTree.svelte'
+    import {mockData} from './lib/src/mock.js';
 </script>
 
 <nav class="flex shadow px-10 py-5">
