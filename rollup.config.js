@@ -31,12 +31,15 @@ function serve() {
 
 export default {
 	input: 'src/main.js',
-	output: {
+	output: [{
 		sourcemap: true,
 		format: 'iife',
 		name: 'SvelteTreeView',
 		file: 'public/build/bundle.js'
 	},
+	{ file: 'public/build/index.mjs', 'format': 'en' },
+	{ file: 'public/build/index.js', 'format': 'umd', name: 'Name' }
+],
 	plugins: [
 		svelte({
 
