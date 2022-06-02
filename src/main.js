@@ -5,7 +5,6 @@
 // });
 
 // export default app;
+import SvelteTree from "./lib/src/components/SvelteTree.svelte";
 
-export { default as SvelteTree } from "./lib/src/components/SvelteTree.svelte";
-export { default as TreeBranch } from "./lib/src/components/TreeBranch.svelte";
-export { default as TreeNode } from "./lib/src/components/TreeNode.svelte";
+export default SvelteTree;
