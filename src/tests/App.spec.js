@@ -1,4 +1,4 @@
-import App from '../src/App.svelte';
+import App from '../App.svelte';
 import { render } from '@testing-library/svelte';
 
 
