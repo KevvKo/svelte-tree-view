@@ -51,6 +51,11 @@ describe('SvelteTree Component', () => {
         expect(results.getByText('An error occured during rendering!')).toBeTruthy();
     });
 
+    it('should render the error message if there are no data passed', () => {
+        const results = render(SvelteTree, { props: { data: mockData1 }});
+        expect(results.queryByText('An error occured during rendering!')).toBeNull();
+    });
+
     it('should render the given data as tree', () => {
         const results = render(SvelteTree, {props: { data: mockData1 }} );
         expect(results.getByText('Kevin Klein')).toBeTruthy();
