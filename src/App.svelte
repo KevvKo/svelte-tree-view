@@ -1,6 +1,6 @@
 <script>
-	import SvelteTree from './components/SvelteTree.svelte'
-    import {mockData} from './mock.js';
+	import SvelteTree from './lib/src/components/SvelteTree.svelte'
+    import { mockData } from './mock.js';
 </script>
 
 <nav class="flex shadow px-10 py-5">
@@ -13,9 +13,9 @@
     </a> 
 </nav>
 <main class="mt-5 mx-5 px-5">
-    <h2 class="text-lg font-semibold text-slate-600 mb-5">Basic Usage</h2>
     <section class="flex mx-5 mb-20">
         <div class="w-1/2">
+            <h2 class="text-lg font-semibold text-slate-600 mb-5">Basic Usage</h2>
             <SvelteTree data={mockData}></SvelteTree>
         </div>
         <div class="w-1/2">
@@ -24,9 +24,9 @@
             </code>
         </div>
     </section>
-    <h2 class="text-lg font-semibold text-slate-600 mb-5">Collapsed Tree</h2>
     <section class="flex mx-5 mb-20">
         <div class="w-1/2">
+            <h2 class="text-lg font-semibold text-slate-600 mb-5">Tree view with collapsed nodes</h2>
             <SvelteTree data={mockData} collapse={true}></SvelteTree>
         </div>
         <div class="w-1/2">

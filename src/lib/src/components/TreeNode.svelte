@@ -25,7 +25,7 @@
             </svg>
         {/if}
         <input class="ml-1 mr-3" type='checkbox'/>
-        <span>{node.name}</span>
+        <span>{node?.name}</span>
     </div>
 
     {#if open}
