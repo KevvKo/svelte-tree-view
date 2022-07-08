@@ -35,7 +35,7 @@
             </code>
         </div>
     </section>
-    <h2 class="text-lg font-semibold text-slate-600 mb-5">API</h2>
+    <h2 class="text-lg font-semibold text-slate-600 mx-5 mb-5">API</h2>
     <section class="mx-5">
         <table class="w-full table-auto">
             <thead class="bg-gray-200">
