@@ -12,6 +12,7 @@
     }
 
     function handleClickInput(){
+        node.checked = !node.checked
         onClick(node);
     }
 
@@ -31,13 +32,13 @@
             {/if}
         {/if}
         <input class="mr-3 ml-1" type='checkbox' on:click={handleClickInput}/>
-        <span>{node?.name}</span>
+            <span>{node?.name}</span>
     </div>
 
     {#if open}
         <ul class={node.children.length === 0 ? 'ml-2' : ''}>
             {#each node.children as child}
-                <svelte:self node={child} collapse={collapse} />
+                <svelte:self node={child} collapse={collapse} onClick={onClick}/>
             {/each} 
         </ul>
     {/if}

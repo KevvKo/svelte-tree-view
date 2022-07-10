@@ -2,8 +2,18 @@
 	import SvelteTree from './lib/src/components/SvelteTree.svelte'
     import { mockData } from './mock.js';
 
+    export let selectedNodes = [];
+
     function handleClick(node){
-        console.log(node)
+
+        if(node.checked){
+            selectedNodes.push(node.name);
+            selectedNodes = selectedNodes;
+        } else {
+            const index = selectedNodes.indexOf(node.name);
+            selectedNodes.splice(index, 1);
+            selectedNodes = selectedNodes;
+        }
     }
 
 </script>
@@ -41,11 +51,19 @@
         </div>
     </section>
     <section class="flex mx-5 mb-20">
-        <div class="w-1/2">
-            <h2 class="text-lg font-semibold text-slate-600 mb-5">Tree with a onClick event</h2>
+        <div class="w-1/3">
+            <h2 class="text-lg font-semibold text-slate-600 mb-5">Tree with an onClick event</h2>
             <SvelteTree data={mockData} collapse={true} onClick={handleClick}></SvelteTree>
         </div>
-        <div class="w-1/2">
+        <div class="w-1/3">
+            <h2 class="font-bold">Output:</h2>
+            <ul>
+                {#each selectedNodes as item}
+                    <li>{item}</li>
+                {/each}
+            </ul>
+        </div>
+        <div class="w-1/3">
             <code class="bg-slate-700 text-slate-300 w-full h-80 block p-5 rounded">
                 &lt;Svelte-Tree-View data=&#123;mockData&#125; collapse=&#123;true&#125;&gt;&lt;/Svelte-Tree-View&gt;
             </code>
