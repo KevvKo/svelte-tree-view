@@ -2,7 +2,7 @@
 import { onMount } from "svelte";
 
 
-    export let node, collapse, onClick, checkbox;
+    export let node, collapse, onClick, checkbox, selectAll;
 
     let open = collapse;
 
@@ -40,7 +40,7 @@ import { onMount } from "svelte";
             {/if}
         {/if}
         {#if checkbox}
-            <input class="mr-3 ml-1" type='checkbox' on:click={handleClickInput}/>
+            <input class="mr-3 ml-1" type='checkbox' on:click={handleClickInput} checked={node.checked}/>
         {/if}
         <span>{node?.name}</span>
     </div>
@@ -48,7 +48,13 @@ import { onMount } from "svelte";
     {#if open}
         <ul class={node.children.length === 0 ? 'ml-2' : ''}>
             {#each node.children as child}
-                <svelte:self node={child} collapse={collapse} onClick={onClick}/>
+                <svelte:self 
+                    node={child} 
+                    collapse={collapse} 
+                    onClick={onClick}
+                    checkbox={checkbox}
+                    selectAll={selectAll}    
+                />
             {/each} 
         </ul>
     {/if}
