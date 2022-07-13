@@ -1,7 +1,13 @@
 <script>
     import TreeBranch from "./TreeBranch.svelte";
-    export let data, onClick, checkbox = true, selectAll = false;
-    export let collapse = false;
+    export let 
+        checkbox = true, 
+        collapse = false,
+        data, 
+        onClick, 
+        selectAll = false, 
+        connectedWithParent = false, 
+        connectedWithChildren = true;
 </script>
 
 {#if data}
@@ -12,6 +18,8 @@
             onClick={onClick} 
             checkbox={checkbox}
             selectAll={selectAll}
+            connectedWithParent={connectedWithParent} 
+            connectedWithChildren={connectedWithChildren}
         ></TreeBranch>
     </ul>    
 {:else}

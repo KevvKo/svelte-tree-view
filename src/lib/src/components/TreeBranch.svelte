@@ -1,6 +1,13 @@
 <script>
     import TreeNode from './TreeNode.svelte';
-    export let data, collapse, onClick, checkbox, selectAll;
+    export let 
+        data, 
+        collapse, 
+        onClick, 
+        checkbox, 
+        selectAll,
+        connectedWithParent, 
+        connectedWithChildren;
 </script>
 
 {#if data}
@@ -11,6 +18,8 @@
             onClick={onClick} 
             checkbox={checkbox}
             selectAll={selectAll}
+            connectedWithParent={connectedWithParent} 
+            connectedWithChildren={connectedWithChildren}
         ></TreeNode>
     {/each}
 {:else}

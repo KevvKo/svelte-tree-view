@@ -1,8 +1,13 @@
 <script>
-import { onMount } from "svelte";
-
-
-    export let node, collapse, onClick, checkbox, selectAll;
+    import { onMount } from "svelte";
+    export let
+        node, 
+        collapse, 
+        onClick, 
+        checkbox,
+        selectAll,
+        connectedWithParent, 
+        connectedWithChildren;
 
     let open = collapse;
 
@@ -10,13 +15,42 @@ import { onMount } from "svelte";
         open = !open;
     };
 
+    /**
+     * 
+     * @param {Object} node
+     */
+    function traverseAndToggleChildren(node){
+
+        if(node.children.length > 0){
+
+                const children = node.children;
+
+                for(let i = 0, l = children.length; i < l; i++){
+
+                    const child = children[i];
+                    child.checked = node.checked;
+
+                    if(child.children.length > 0) {
+                        traverseAndToggleChildren(child)  
+                    }
+                }
+            }
+    };
+
     function handleClickOpen(){
         toggleOpen();
-    }
+    };
 
     function handleClickInput(){
-        node.checked = !node.checked
-        onClick(node);
+        node.checked = !node.checked;
+
+        if(connectedWithChildren){
+           traverseAndToggleChildren(node);
+        }
+
+        if(onClick){
+            onClick(node);
+        }
     }
 
     onMount(() => {
@@ -54,6 +88,8 @@ import { onMount } from "svelte";
                     onClick={onClick}
                     checkbox={checkbox}
                     selectAll={selectAll}    
+                    connectedWithParent={connectedWithParent} 
+                    connectedWithChildren={connectedWithChildren}
                 />
             {/each} 
         </ul>
