@@ -1,4 +1,7 @@
 <script>
+import { onMount } from "svelte";
+
+
     export let node, collapse, onClick, checkbox;
 
     let open = collapse;
@@ -16,6 +19,11 @@
         onClick(node);
     }
 
+    onMount(() => {
+        if(selectAll) {
+            node.checked = true;
+        }
+    })
 </script>
 
 <li class="ml-5">

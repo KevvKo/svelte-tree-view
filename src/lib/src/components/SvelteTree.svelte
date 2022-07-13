@@ -1,6 +1,6 @@
 <script>
     import TreeBranch from "./TreeBranch.svelte";
-    export let data, onClick, checkbox = true;
+    export let data, onClick, checkbox = true, selectAll = false;
     export let collapse = false;
 </script>
 
@@ -11,6 +11,7 @@
             collapse={collapse} 
             onClick={onClick} 
             checkbox={checkbox}
+            selectAll={selectAll}
         ></TreeBranch>
     </ul>    
 {:else}
