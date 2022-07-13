@@ -1,5 +1,5 @@
 <script>
-    export let node, collapse, onClick;
+    export let node, collapse, onClick, checkbox;
 
     let open = collapse;
 
@@ -31,8 +31,10 @@
                 </svg>
             {/if}
         {/if}
-        <input class="mr-3 ml-1" type='checkbox' on:click={handleClickInput}/>
-            <span>{node?.name}</span>
+        {#if checkbox}
+            <input class="mr-3 ml-1" type='checkbox' on:click={handleClickInput}/>
+        {/if}
+        <span>{node?.name}</span>
     </div>
 
     {#if open}
