@@ -7,7 +7,8 @@
         checkbox,
         selectAll,
         connectedWithParent, 
-        connectedWithChildren;
+        connectedWithChildren,
+        parent = "";
 
     let open = collapse;
 
@@ -37,6 +38,14 @@
             }
     };
 
+    function traverseAndToggleParents(node){
+
+        if(node.parent){
+            node.parent.checked = node.checked;
+            traverseAndToggleParents(node.parent);
+        }
+    };
+
     function handleClickOpen(){
         toggleOpen();
     };
@@ -48,12 +57,19 @@
            traverseAndToggleChildren(node);
         }
 
+        if(parent && connectedWithParent){
+            traverseAndToggleParents(node);
+        }
+
         if(onClick){
             onClick(node);
         }
     }
 
     onMount(() => {
+
+        node.parent = parent;
+
         if(selectAll) {
             node.checked = true;
         }
@@ -83,7 +99,8 @@
         <ul class={node.children.length === 0 ? 'ml-2' : ''}>
             {#each node.children as child}
                 <svelte:self 
-                    node={child} 
+                    bind:node={child} 
+                    bind:parent={node}
                     collapse={collapse} 
                     onClick={onClick}
                     checkbox={checkbox}

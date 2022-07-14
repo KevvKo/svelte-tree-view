@@ -6,8 +6,8 @@
         data, 
         onClick, 
         selectAll = false, 
-        connectedWithParent = false, 
-        connectedWithChildren = true;
+        connectedWithParent = true, 
+        connectedWithChildren = false;
 </script>
 
 {#if data}

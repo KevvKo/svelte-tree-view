@@ -1,5 +1,6 @@
 <script>
     import TreeNode from './TreeNode.svelte';
+
     export let 
         data, 
         collapse, 
@@ -13,7 +14,7 @@
 {#if data}
     {#each data as item}
         <TreeNode 
-            node={item} 
+            bind:node={item} 
             collapse={collapse} 
             onClick={onClick} 
             checkbox={checkbox}
