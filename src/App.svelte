@@ -148,8 +148,8 @@
           class="border-b-2 border-slate-200 hover:bg-gray-100 duration-200 transition-all"
         >
           <td class="p-4"><b>data</b></td>
-          <td class="p-4">Object</td>
-          <td class="p-4">&#123;&#125;</td>
+          <td class="p-4">Array</td>
+          <td class="p-4">&#91;&#93;</td>
           <td class="p-4">Object of child and parents to render as a tree</td>
         </tr>
         <tr

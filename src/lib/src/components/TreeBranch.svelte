@@ -2,16 +2,16 @@
     import TreeNode from './TreeNode.svelte';
 
     export let 
-        data, 
-        collapse, 
-        onClick, 
-        checkbox, 
-        selectAll,
-        connectedWithParent, 
-        connectedWithChildren;
+        data = [], 
+        collapse = false, 
+        onClick = '', 
+        checkbox = true, 
+        selectAll = false,
+        connectedWithParent = false, 
+        connectedWithChildren = false;
 </script>
 
-{#if data}
+{#if data && data.length > 0}
     {#each data as item}
         <TreeNode 
             bind:node={item} 

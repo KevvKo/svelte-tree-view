@@ -8,6 +8,7 @@ describe('SvelteTree Component', () => {
         {
             id: 0,
             name: "Kevin Klein",
+            checked: false,
             children: []
         },
     ]
@@ -16,24 +17,29 @@ describe('SvelteTree Component', () => {
         {
             id: 0,
             name: "Kevin Klein",
+            checked: false,
             children: [
                 {
-                    id: 0,
+                    id: 1,
                     name: "Janine Floh",
+                    checked: false,
                     children: []
                 },
                 {
-                    id: 0,
+                    id: 2,
                     name: "Benjamin Rotherdamm",
+                    checked: false,
                     children: []
                 },
                 {
-                    id: 0,
+                    id: 3,
                     name: "Anna Rasch",
+                    checked: false,
                     children: [
                         {
-                            id: 0,
+                            id: 4,
                             name: "Marius Westerboy",
+                            checked: false,
                             children: []
                         },
                     ]

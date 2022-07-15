@@ -5,12 +5,12 @@
         collapse = false,
         connectedWithChildren = false,
         connectedWithParent = true, 
-        data = {}, 
+        data = [], 
         onClick = '', 
         selectAll = false;
 </script>
 
-{#if data}
+{#if data && data.length > 0}
     <ul>
         <TreeBranch 
             data={data} 
