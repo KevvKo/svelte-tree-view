@@ -93,7 +93,7 @@
                 {/if}
             {/if}
             {#if checkbox}
-                <input class="mr-3 ml-1" type='checkbox' on:click={handleClickInput} checked={node.checked}/>
+                <input class="mr-3 ml-1" type='checkbox' data-testid="node-checkbox" on:click={handleClickInput} checked={node.checked}/>
             {/if}
             <span>{node?.name}</span>
         </div>
