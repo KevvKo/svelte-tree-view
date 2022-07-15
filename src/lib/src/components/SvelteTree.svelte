@@ -3,11 +3,11 @@
     export let 
         checkbox = true, 
         collapse = false,
-        data, 
-        onClick, 
-        selectAll = false, 
+        connectedWithChildren = false,
         connectedWithParent = true, 
-        connectedWithChildren = false;
+        data = {}, 
+        onClick = '', 
+        selectAll = false;
 </script>
 
 {#if data}

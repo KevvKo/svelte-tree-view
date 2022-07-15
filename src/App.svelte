@@ -98,27 +98,66 @@
     <table class="w-full table-auto">
       <thead class="bg-gray-200">
         <tr>
-          <th class="p-4 w-1/2 text-left">Parameter</th>
-          <th class="p-4 w-1/2 text-left">Description</th>
+          <th class="p-4 w-1/4 text-left">Parameter</th>
+          <th class="p-4 w-1/4 text-left">Type</th>
+          <th class="p-4 w-1/4 text-left">Default</th>
+          <th class="p-4 w-1/4 text-left">Description</th>
         </tr>
       </thead>
       <tbody>
         <tr
           class="border-b-2 border-slate-200 hover:bg-gray-100 duration-200 transition-all"
         >
-          <td class="p-4"><b>data</b></td>
-          <td class="p-4">Object of child and parents to render as a tree</td>
+          <td class="p-4"><b>checkbox</b></td>         
+          <td class="p-4">Boolean</td>
+          <td class="p-4">true</td>
+          <td class="p-4">Activate or deactivate the checkboxes for the tree</td
+          >
         </tr>
         <tr
           class="border-b-2 border-slate-200 hover:bg-gray-100 duration-200 transition-all"
         >
           <td class="p-4"><b>collapse</b></td>
+          <td class="p-4">Boolean</td>
+          <td class="p-4">false</td>
           <td class="p-4">Expanding the tree or not</td>
         </tr>
         <tr
           class="border-b-2 border-slate-200 hover:bg-gray-100 duration-200 transition-all"
         >
+          <td class="p-4"><b>connectedWithChildren</b></td>
+          <td class="p-4">Boolean</td>
+          <td class="p-4">false</td>
+          <td class="p-4"
+            >Handle the selection for all children, if the node is selected or
+            deselected</td
+          >
+        </tr>
+        <tr
+          class="border-b-2 border-slate-200 hover:bg-gray-100 duration-200 transition-all"
+        >
+          <td class="p-4"><b>connectedWithParent</b></td>
+          <td class="p-4">Boolean</td>
+          <td class="p-4">false</td>
+          <td class="p-4"
+            >Handle the selection of all parents, if the node is selected or
+            deselected</td
+          >
+        </tr>
+        <tr
+          class="border-b-2 border-slate-200 hover:bg-gray-100 duration-200 transition-all"
+        >
+          <td class="p-4"><b>data</b></td>
+          <td class="p-4">Object</td>
+          <td class="p-4">&#123;&#125;</td>
+          <td class="p-4">Object of child and parents to render as a tree</td>
+        </tr>
+        <tr
+          class="border-b-2 border-slate-200 hover:bg-gray-100 duration-200 transition-all"
+        >
           <td class="p-4"><b>onClick</b></td>
+          <td class="p-4">Event</td>
+          <td class="p-4"> undefined</td>
           <td class="p-4"
             >Event to return the node on click or do something else</td
           >
@@ -127,6 +166,8 @@
           class="border-b-2 border-slate-200 hover:bg-gray-100 duration-200 transition-all"
         >
           <td class="p-4"><b>selectAll</b></td>
+          <td class="p-4">Boolean</td>
+          <td class="p-4">false</td>
           <td class="p-4">select all nodes and set the node as checked</td>
         </tr>
       </tbody>
