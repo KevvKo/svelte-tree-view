@@ -1,5 +1,5 @@
 import TreeNode from '../src/components/TreeNode.svelte';
-import { render } from '@testing-library/svelte';
+import { render, fireEvent } from '@testing-library/svelte';
 
 
 describe('TreeNode Component', () => {
@@ -71,5 +71,27 @@ describe('TreeNode Component', () => {
         results.getAllByTestId('node-checkbox').forEach(node => {
             expect(node.checked).toEqual(true);
         });
-    })
+    });
+    it('should open the child nodes', async () => {
+        const results = render(TreeNode, {props: { node: mockData}});
+        const onClick = jest.fn();
+        results.component.$on('click', onClick);
+        const button = results.container.querySelector('svg');
+        expect(button).not.toBeNull();
+        await fireEvent.click(button)
+        expect(results.queryByTestId('caret-down-node')).toBeTruthy();
+        expect(results.getAllByTestId('node-checkbox')).toHaveLength(4);
+    });
+    it('should select all children if parent is checked', async () => {
+        const results = render(TreeNode, {props: { node: mockData, collapse: true, connectedWithChildren: true}});
+        const onClick = jest.fn();
+        results.component.$on('click', onClick);
+        const button = results.getByTestId('node-checkbox');
+        
+        expect(button).not.toBeNull();
+        await fireEvent.click(button)
+        results.getAllByTestId('node-checkbox').forEach(node => {
+            expect(node.checked).toEqual(true);
+        });
+    });
 });
