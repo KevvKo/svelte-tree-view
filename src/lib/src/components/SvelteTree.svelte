@@ -4,7 +4,7 @@
         checkbox = true, 
         collapse = false,
         connectedWithChildren = false,
-        connectedWithParent = true, 
+        connectedWithParent = false, 
         data = [], 
         onClick = '', 
         selectAll = false;
