@@ -39,7 +39,8 @@
     <div class="w-1/2">
       <code class="bg-slate-700 text-slate-300 w-full h-80 block p-5 rounded">
         &lt;Svelte-Tree-View
-        data=&#123;mockData&#125;&gt;&lt;/Svelte-Tree-View&gt;
+        <br>&nbsp;data=&#123;mockData&#125;
+        <br>&gt;&lt;/Svelte-Tree-View&gt;
       </code>
     </div>
   </section>
@@ -52,19 +53,21 @@
     </div>
     <div class="w-1/2">
       <code class="bg-slate-700 text-slate-300 w-full h-80 block p-5 rounded">
-        &lt;Svelte-Tree-View data=&#123;mockData&#125;
-        collapse=&#123;true&#125;&gt;&lt;/Svelte-Tree-View&gt;
+        &lt;Svelte-Tree-View 
+        <br>&nbsp;data=&#123;mockData&#125;
+        <br>&nbsp;collapse=&#123;true&#125;
+        <br>&gt;&lt;/Svelte-Tree-View&gt;
       </code>
     </div>
   </section>
   <section class="flex mx-5 mb-20">
-    <div class="w-1/3">
+    <div class="w-1/4">
       <h2 class="text-lg font-semibold text-slate-600 mb-5">
         Tree with an onClick event
       </h2>
       <SvelteTree data={mockData} collapse={true} onClick={handleClick} />
     </div>
-    <div class="w-1/3">
+    <div class="w-1/4">
       <h2 class="font-bold">Output:</h2>
       <ul>
         {#each selectedNodes as item}
@@ -72,10 +75,26 @@
         {/each}
       </ul>
     </div>
-    <div class="w-1/3">
-      <code class="bg-slate-700 text-slate-300 w-full h-80 block p-5 rounded">
-        &lt;Svelte-Tree-View data=&#123;mockData&#125;
-        collapse=&#123;true&#125;&gt;&lt;/Svelte-Tree-View&gt;
+    <div class="w-1/2">
+      <code class="bg-slate-700 text-slate-300 w-full h-100 block p-5 rounded">
+        export let selectedNodes = &#91;&#93;;<br>
+        <br>
+        function handleClick&#40;node&#41; &#123;<br>
+        &nbsp;if&nbsp;&#40;node.checked&#41; &#123;<br>
+        &nbsp;&nbsp;selectedNodes.push&#40;node.name&#41;;<br>
+        &nbsp;&nbsp;selectedNodes = selectedNodes;<br>
+        &nbsp;&#125; else &#123;<br>
+        &nbsp;&nbsp;const index = selectedNodes.indexOf&#40;node.name&#41;;<br>
+        &nbsp;&nbsp;selectedNodes.splice&#40;index, 1&#41;;<br>
+        &nbsp;&nbsp;selectedNodes = selectedNodes;<br>
+        &nbsp;&#125;<br>
+        &#125;<br>
+        <br>
+        &lt;Svelte-Tree-View 
+        <br>&nbsp;=&#123;mockData&#125;
+        <br>&nbsp;collapse=&#123;true&#125; 
+        <br>&nbsp;onClick=&#123;handleClick&#125;
+        <br>&gt;&lt;/Svelte-Tree-View&gt;
       </code>
     </div>
   </section>
@@ -88,8 +107,9 @@
     </div>
     <div class="w-1/2">
       <code class="bg-slate-700 text-slate-300 w-full h-80 block p-5 rounded">
-        &lt;Svelte-Tree-View data=&#123;mockData&#125;
-        collapse=&#123;true&#125;&gt;&lt;/Svelte-Tree-View&gt;
+        &lt;Svelte-Tree-View 
+        <br>&nbsp;data=&#123;mockData&#125;
+        <br>&nbsp;checkbox=&#123;false&#125;<br>&gt;&lt;/Svelte-Tree-View&gt;
       </code>
     </div>
   </section>
