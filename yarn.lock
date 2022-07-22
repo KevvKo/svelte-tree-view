@@ -4298,6 +4298,77 @@ svelte-preprocess@^4.10.6:
     sorcery "^0.10.0"
     strip-indent "^3.0.0"
 
+svelte-tree-display@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/svelte-tree-display/-/svelte-tree-display-1.0.0.tgz#849ae68537b70810659322e09b8b1f6e55507ff7"
+  integrity sha512-gSWfnGnqW+d+xHLR/xDmXcuPMwHihaaRupxvqSFLAeWXIyWRJXB/O+nb+EsPlUv9r4S5YUNj8esnS4FK6eoMOA==
+  dependencies:
+    autoprefixer "^10.4.7"
+    gh-pages "^4.0.0"
+    postcss "^8.4.13"
+    sirv-cli "^2.0.0"
+    tailwindcss "^3.0.24"
+
+svelte-tree-display@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/svelte-tree-display/-/svelte-tree-display-1.0.1.tgz#ebff09cce31eed7f53a80e61c97b9a1157049a74"
+  integrity sha512-5MVfR17Kd4t8VErbCOqdxBSGIZFzGJXJyQYEU60xdmb7YW2+/54eky8dsk3RCiXWY7/sFX3SuAQ8E8QWjxTjcQ==
+  dependencies:
+    autoprefixer "^10.4.7"
+    gh-pages "^4.0.0"
+    postcss "^8.4.13"
+    sirv-cli "^2.0.0"
+    svelte-tree-display "^1.0.0"
+    tailwindcss "^3.0.24"
+
+svelte-tree-display@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/svelte-tree-display/-/svelte-tree-display-1.0.2.tgz#b2aae38250ccd603cd80cd147f6d396a303168e6"
+  integrity sha512-Ojqvrh0PCKK93HM/ZB9JTSSGMVP9Hxpz52hV0tEerdumo8upz5duILLSiXxLDaJeLMbdTz4rPoJ7oY7jvi7I5g==
+  dependencies:
+    autoprefixer "^10.4.7"
+    gh-pages "^4.0.0"
+    postcss "^8.4.13"
+    sirv-cli "^2.0.0"
+    svelte-tree-display "^1.0.1"
+    tailwindcss "^3.0.24"
+
+svelte-tree-display@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/svelte-tree-display/-/svelte-tree-display-1.0.3.tgz#807e4f9931d5d6b91cdc62561b3bebf6541c94f0"
+  integrity sha512-55mxN8G79H7VLNbIAtpsynLG98pqXCFI1bx4SoWk7eA4PsipdCYSR5bMV//FEn1n3jAXqGP8of14yUfvI666+A==
+  dependencies:
+    autoprefixer "^10.4.7"
+    gh-pages "^4.0.0"
+    postcss "^8.4.13"
+    sirv-cli "^2.0.0"
+    svelte-tree-display "^1.0.2"
+    tailwindcss "^3.0.24"
+
+svelte-tree-display@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/svelte-tree-display/-/svelte-tree-display-1.0.4.tgz#61e68f0e6589b08f4384d6df3137e173cee303e6"
+  integrity sha512-A67XZEZQsqaCQE2PGxbr05QwNrOSTRrBpxV9RZAXyly0wLkQX76TbS0COjFPaCFc1AuwCBst3sxThaPIsVkcoA==
+  dependencies:
+    autoprefixer "^10.4.7"
+    gh-pages "^4.0.0"
+    postcss "^8.4.13"
+    sirv-cli "^2.0.0"
+    svelte-tree-display "^1.0.3"
+    tailwindcss "^3.0.24"
+
+svelte-tree-display@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/svelte-tree-display/-/svelte-tree-display-1.0.5.tgz#20dbee52ee00d28e0a46f6a197df24b8803dcf58"
+  integrity sha512-VdjuatnLj6qmXFDVNbtjia+/fY+da8hEkWKoshD0rLKgX7Gc7wddwvksviUOaYT9wJqRJ4l+C7H8NmAddR3ynw==
+  dependencies:
+    autoprefixer "^10.4.7"
+    gh-pages "^4.0.0"
+    postcss "^8.4.13"
+    sirv-cli "^2.0.0"
+    svelte-tree-display "^1.0.4"
+    tailwindcss "^3.0.24"
+
 svelte@^3.0.0:
   version "3.48.0"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.48.0.tgz#f98c866d45e155bad8e1e88f15f9c03cd28753d3"

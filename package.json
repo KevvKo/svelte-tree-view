@@ -1,9 +1,8 @@
 {
-  "name": "svelte-tree-view",
-  "version": "1.0.0",
-  "private": true,
-  "main": "public/build/index.js",
-  "svelte": "src/main.js",
+  "name": "svelte-tree-display",
+  "version": "1.0.5",
+  "main": "src/lib/src/index.js",
+  "svelte": "src/lib/src/index.js",
   "module": "public/build/index.mjs",
   "scripts": {
     "build": "rollup -c",
@@ -39,6 +38,7 @@
     "gh-pages": "^4.0.0",
     "postcss": "^8.4.13",
     "sirv-cli": "^2.0.0",
+    "svelte-tree-display": "^1.0.5",
     "tailwindcss": "^3.0.24"
   },
   "author": "KevvKo kklein915@gmail.com",

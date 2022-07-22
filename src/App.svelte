@@ -40,7 +40,7 @@
       <code class="bg-slate-700 text-slate-300 w-full h-80 block p-5 rounded">
         &lt;Svelte-Tree-View
         <br>&nbsp;data=&#123;mockData&#125;
-        <br>&gt;&lt;/Svelte-Tree-View&gt;
+        <br>&nbsp;&gt;&lt;/Svelte-Tree-View&gt;
       </code>
     </div>
   </section>
