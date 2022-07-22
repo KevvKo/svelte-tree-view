@@ -5,12 +5,12 @@
   "main": "public/build/index.js",
   "svelte": "src/main.js",
   "module": "public/build/index.mjs",
-
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.7",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.13",
     "sirv-cli": "^2.0.0",
     "tailwindcss": "^3.0.24"
