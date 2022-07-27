@@ -1,6 +1,6 @@
 {
   "name": "svelte-tree-display",
-  "version": "1.0.5",
+  "version": "1.1",
   "main": "src/lib/src/index.js",
   "svelte": "src/lib/src/index.js",
   "module": "public/build/index.mjs",
